@@ -12,9 +12,9 @@ export default function Community() {
   const y3 = useElementParallax(ref3, [4, -24])
 
   return (
-    <section className="py-28" style={{ background: 'var(--gc-700)' }}>
+    <section className="py-16" style={{ background: 'var(--gc-700)' }}>
       <div className="max-w-7xl mx-auto px-6 text-center relative">
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-8"><div className="text-[18vw] font-bold" style={{ color: 'rgba(232,226,220,0.03)' }}>PEOPLE</div></div>
+        {/* oversized background label removed to keep single dominant heading */}
         <div className="relative z-10">
           <motion.h2 variants={containerStagger} initial="hidden" whileInView="show" viewport={{ once: true }} className="text-[6vw] leading-tight font-bold uppercase">
             <motion.span ref={ref1} variants={fadeUp} style={{ y: y1 }}>BUILT BY</motion.span>

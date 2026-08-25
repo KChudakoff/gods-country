@@ -19,14 +19,17 @@ function GalleryCard({ src, meta, tall = false }: { src: string; meta: string; t
       <div ref={ref} className="overflow-hidden">
         <motion.img src={src} alt={meta} className={`w-full ${tall ? 'h-96' : 'h-64'} object-cover object-center`} style={{ objectPosition: '50% 40%', y }} whileHover={{ scale: 1.03, filter: 'brightness(1.04)' }} transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }} />
       </div>
-      <motion.figcaption className="p-3 text-xs text-muted" whileHover={{ color: '#E8E2DC' }}>{meta}</motion.figcaption>
+      <motion.figcaption className="p-3 text-xs text-muted">
+        <div className="uppercase text-[11px] tracking-wider">{meta.split('—')[0]?.trim()}</div>
+        <div className="mt-1 text-[13px] font-semibold">{meta.split('—').slice(1).join('—').trim()}</div>
+      </motion.figcaption>
     </motion.figure>
   )
 }
 
 export default function Gallery() {
   return (
-    <section id="gallery" className="py-20">
+    <section id="gallery" className="py-12">
       <div className="max-w-7xl mx-auto px-6">
         <motion.h2 variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} className="text-[5vw] leading-tight font-bold uppercase">WORLD ARCHIVE</motion.h2>
 

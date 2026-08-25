@@ -5,16 +5,17 @@ module.exports = {
     extend: {
       colors: {
         black: '#000000',
-        'deep-black': '#0A0A0A',
-        'warm-black': '#0E0D0C',
-        surface: '#161616',
-        'surface-alt': '#1D1C1C',
-        'surface-hover': '#232323',
-        'surface-light': '#2C2C2C',
-        border: '#363636',
-        muted: '#78736C',
-        secondary: '#AAA5A0',
-        'primary-text': '#E8E2DC'
+        'bg-deep': '#080808',
+        'bg-main': '#0D0D0D',
+        'surface-1': '#131312',
+        'surface-warm': '#191817',
+        'surface-alt': '#211F1D',
+        border: 'rgba(240,237,231,0.10)',
+        'border-strong': 'rgba(240,237,231,0.18)',
+        muted: '#716D66',
+        secondary: '#AAA49A',
+        'primary-text': '#F0EDE7',
+        'accent-warm': '#A98E72'
       },
       fontFamily: {
         sans: ['Inter', 'Manrope', 'ui-sans-serif', 'system-ui']

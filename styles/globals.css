@@ -3,28 +3,32 @@
 @tailwind utilities;
 
 :root{
-  /* GODS COUNTRY palette (warm neutral monochrome) */
-  --gc-black: #000000;
-  --gc-900: #080808;
-  --gc-850: #0D0D0D;
-  --gc-800: #121212;
-  --gc-700: #181818;
-  --gc-600: #202020;
-  --gc-500: #292929;
-  --gc-400: #343434;
-  --gc-300: #464646;
-  --gc-200: #646464;
-  --gc-150: #8A8782;
-  --gc-100: #AAA5A0;
-  --gc-80: #CBC5BE;
-  --gc-10: #E8E2DC;
-  --gc-5: #F1ECE6;
+  /* GODS COUNTRY warm dark monochrome palette */
+  --gc-deepest: #080808; /* Background deepest */
+  --gc-main: #0D0D0D; /* Main background */
+  --gc-surface-1: #131312; /* Raised dark surface */
+  --gc-surface-2: #191817; /* Warm dark surface */
+  --gc-surface-3: #211F1D; /* Secondary surface */
 
-  --bg: var(--gc-black);
-  --surface: var(--gc-700);
-  --text: var(--gc-10);
-  --muted: var(--gc-100);
-  --border: var(--gc-400);
+  --gc-text-primary: #F0EDE7; /* Primary text */
+  --gc-text-secondary: #AAA49A; /* Secondary text */
+  --gc-text-muted: #716D66; /* Muted text */
+
+  --gc-border-subtle: rgba(240,237,231,0.10);
+  --gc-border-strong: rgba(240,237,231,0.18);
+
+  --gc-accent-warm: #A98E72; /* Warm accent - use sparingly */
+
+  --bg: var(--gc-main);
+  --bg-deep: var(--gc-deepest);
+  --surface: var(--gc-surface-1);
+  --surface-warm: var(--gc-surface-2);
+  --surface-alt: var(--gc-surface-3);
+  --text: var(--gc-text-primary);
+  --muted: var(--gc-text-muted);
+  --border: var(--gc-border-subtle);
+  --border-strong: var(--gc-border-strong);
+  --accent: var(--gc-accent-warm);
 }
 
 html,body,#__next{height:100%;}
@@ -40,9 +44,7 @@ h1, .hero-title { font-family: Inter, Manrope, system-ui, -apple-system, 'Segoe 
 h2, h3 { font-family: Inter, Manrope, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; font-weight:700; }
 p, small, .meta { color: var(--muted); }
 
-/* Background large index style */
-.bg-index { position: absolute; inset: 0; display:flex; align-items:center; justify-content:flex-start; pointer-events:none; }
-.bg-index .num { font-weight:900; color: rgba(232,226,220,0.03); font-size: 28vw; line-height:0.9; }
+/* Background large index style removed - prefer single dominant typography layer */
 
 /* micro metadata */
 .micro { font-size: 11px; letter-spacing: 0.12em; text-transform:uppercase; color:var(--gc-100); }

@@ -8,13 +8,13 @@ export default function World() {
   const y = useElementParallax(ref, [10, -25])
 
   return (
-    <section id="world" className="py-20">
+    <section id="world" className="py-12">
       <div className="max-w-7xl mx-auto px-6">
         <motion.h2 variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} className="text-[6vw] leading-tight font-bold uppercase">THE<br/>WORLD</motion.h2>
 
         <div className="mt-10 grid grid-cols-12 gap-8 items-start">
           <div className="col-span-7">
-            <div className="w-full rounded-sm overflow-hidden border border-border image-frame h-[520px]">
+            <div className="w-full rounded-sm overflow-hidden border border-border image-frame h-[460px]">
               <motion.img ref={ref} src="/images/world.jpg" alt="World placeholder" className="w-full h-full object-cover object-center" style={{ objectPosition: '50% 35%', y }} initial={{ opacity: 0, scale: 1.04, y: 20 }} whileInView={{ opacity: 1, scale: 1.0, y: 0 }} transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }} viewport={{ once: true }} />
             </div>
           </div>

@@ -34,7 +34,7 @@ export default function ServerPanel() {
   }
 
   return (
-    <section id="server" className="py-20 border-t border-border" style={{ background: 'var(--gc-850)' }}>
+    <section id="server" className="py-12 border-t border-border" style={{ background: 'var(--surface-warm)' }}>
       <div className="max-w-5xl mx-auto px-6">
         <div className="micro text-xs mb-4">ACCESS / 04</div>
         <motion.h2 className="text-[5vw] leading-tight font-bold uppercase">
@@ -56,9 +56,9 @@ export default function ServerPanel() {
           </div>
           <div>
             <motion.div variants={fadeUp} className="text-muted text-sm">SERVER</motion.div>
-            <motion.div variants={fadeUp} className="mt-2 flex items-center gap-3">
-              <div className="uppercase">{ip}</div>
-              <motion.button whileHover={{ y: -2, scale: 1.02 }} transition={{ duration: 0.5 }} onClick={handleCopy} className="px-3 py-1 border border-border text-sm uppercase">{copied ? 'COPIED' : 'COPY IP'}</motion.button>
+              <motion.div variants={fadeUp} className="mt-2 flex items-center gap-3">
+              <div className="uppercase tracking-wider">{ip}</div>
+              <motion.button whileHover={{ y: -2, scale: 1.02 }} transition={{ duration: 0.45 }} onClick={handleCopy} className="px-3 py-1 border border-border text-sm uppercase text-muted hover:text-primary-text" aria-pressed={copied}>{copied ? 'COPIED' : 'COPY ADDRESS'}</motion.button>
             </motion.div>
           </div>
         </motion.div>

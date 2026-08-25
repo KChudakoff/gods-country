@@ -10,7 +10,7 @@ export default function Hero() {
   const overlayOpacity = useGlobalParallax([0.65, 0.8], [0, 800])
 
   return (
-    <section className="min-h-screen relative flex items-end" aria-label="Hero">
+    <section className="min-h-[60vh] relative flex items-end" aria-label="Hero">
       {/*
         Replace the background image below with a high-quality server screenshot.
         Path: /public/hero.jpg
@@ -28,25 +28,28 @@ export default function Hero() {
         <motion.div className="absolute inset-0 bg-black" style={{ opacity: overlayOpacity }} />
         <div className="absolute inset-0 mix-blend-overlay" style={{ background: 'linear-gradient(180deg, rgba(0,0,0,0.15), rgba(0,0,0,0.8))' }} />
 
-        {/* background index */}
-        <div className="bg-index pointer-events-none">
-          <div className="num">WORLD 00</div>
-        </div>
+        {/* background index removed to keep a single dominant typography layer */}
       </div>
 
-      <motion.div variants={heroContainer} initial="hidden" animate="show" className="relative z-10 max-w-7xl mx-auto px-6 pb-36 w-full">
+      <motion.div variants={heroContainer} initial="hidden" animate="show" className="relative z-10 max-w-7xl mx-auto px-6 pb-20 w-full mt-12 md:mt-24">
         <motion.div className="text-primary-text">
           <motion.h1 variants={fadeUp} style={{ y: titleY }} className="hero-title text-[12vw] leading-[0.9] font-bold uppercase">GODS<br/>COUNTRY</motion.h1>
           <motion.p variants={fadeUp} style={{ y: smallY }} className="mt-6 micro uppercase tracking-wider">PRIVATE WORLD — JAVA EDITION — EST. 2026</motion.p>
 
-          <motion.div variants={fadeUp} style={{ y: smallY }} className="mt-8 flex gap-4 items-center">
+          <motion.div variants={fadeUp} style={{ y: smallY }} className="mt-8 flex gap-6 items-center">
             <motion.a whileHover={{ y: -3 }} transition={{ duration: 0.55 }} className="px-6 py-3 border border-border text-sm uppercase hover:bg-surface-hover" href="#server">Enter the world</motion.a>
             <motion.a whileHover={{ y: -3 }} transition={{ duration: 0.55 }} className="px-6 py-3 border border-border text-sm uppercase hover:bg-surface-hover" href="#discord">Join Discord</motion.a>
           </motion.div>
 
-          <motion.div variants={fadeUp} style={{ y: smallY }} className="mt-6 text-xs micro">
-            <div className="inline-flex items-center gap-6"><span>WORLD STATUS</span><span>ONLINE</span></div>
-            <div className="mt-2">PLAYERS — 6 / 30</div>
+          <motion.div variants={fadeUp} style={{ y: smallY }} className="mt-6 text-xs micro flex flex-col gap-2">
+            <div className="inline-flex items-center gap-6">
+              <span>WORLD STATUS</span>
+              <span className="inline-flex items-center gap-2">
+                <span style={{ width:8, height:8, borderRadius:8, background: 'var(--accent)', display:'inline-block' }} aria-hidden="true" />
+                <span>ONLINE</span>
+              </span>
+            </div>
+            <div className="mt-0">PLAYERS — 6 / 30</div>
           </motion.div>
         </motion.div>
       </motion.div>
