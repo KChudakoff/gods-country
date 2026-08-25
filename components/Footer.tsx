@@ -6,7 +6,7 @@ export default function Footer() {
         <div className="mt-2">PRIVATE MINECRAFT COMMUNITY — EST. 2026</div>
         <div className="mt-4">
           <a href="#world" className="mr-6">WORLD</a>
-          <a href="#discord" className="mr-6">DISCORD</a>
+          <a href="https://discord.gg/yz8FK2KehW" className="mr-6" target="_blank" rel="noopener noreferrer">DISCORD</a>
           <a href="#server">SERVER</a>
         </div>
 

@@ -25,7 +25,7 @@ export default function Community() {
           </motion.h2>
           <motion.p variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} className="mt-6 max-w-2xl mx-auto text-muted">GODS COUNTRY is a persistent shared world where memories and builds remain. Join the community to participate in the next chapter.</motion.p>
           <div className="mt-8">
-            <motion.a whileHover={{ y: -3, scale: 1.02 }} href="#discord" className="px-6 py-3 border border-border uppercase">Join the Discord</motion.a>
+            <motion.a whileHover={{ y: -3, scale: 1.02 }} href="https://discord.gg/yz8FK2KehW" target="_blank" rel="noopener noreferrer" className="px-6 py-3 border border-border uppercase">Join the Discord</motion.a>
           </div>
         </div>
       </div>

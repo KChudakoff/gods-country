@@ -45,7 +45,7 @@ export default function Hero() {
 
           <motion.div variants={fadeUp} style={{ y: smallY }} className="mt-8 flex gap-6 items-center">
             <motion.a whileHover={{ y: -3 }} transition={{ duration: 0.55 }} className="px-6 py-3 border border-border text-sm uppercase hover:bg-surface-hover" href="#server">Enter the world</motion.a>
-            <motion.a whileHover={{ y: -3 }} transition={{ duration: 0.55 }} className="px-6 py-3 border border-border text-sm uppercase hover:bg-surface-hover" href="#discord">Join Discord</motion.a>
+            <motion.a whileHover={{ y: -3 }} transition={{ duration: 0.55 }} className="px-6 py-3 border border-border text-sm uppercase hover:bg-surface-hover" href="https://discord.gg/yz8FK2KehW" target="_blank" rel="noopener noreferrer">Join Discord</motion.a>
           </motion.div>
 
           <motion.div variants={fadeUp} style={{ y: smallY }} className="mt-6 text-xs micro flex flex-col gap-2">

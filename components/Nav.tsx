@@ -27,7 +27,7 @@ export default function Nav() {
           <motion.a whileHover={{ y: -2, opacity: 0.9 }} className="nav-link" href="#world">WORLD</motion.a>
           <motion.a whileHover={{ y: -2, opacity: 0.9 }} className="nav-link" href="#server">SERVER</motion.a>
           <motion.a whileHover={{ y: -2, opacity: 0.9 }} className="nav-link" href="#gallery">GALLERY</motion.a>
-          <motion.a whileHover={{ y: -2, opacity: 0.9 }} className="nav-link" href="#discord">DISCORD</motion.a>
+          <motion.a whileHover={{ y: -2, opacity: 0.9 }} className="nav-link" href="https://discord.gg/yz8FK2KehW" target="_blank" rel="noopener noreferrer">DISCORD</motion.a>
         </nav>
         <div className="md:hidden">Menu</div>
       </div>
