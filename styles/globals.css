@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  /* GODS COUNTRY palette (warm neutral monochrome) */
+  --gc-black: #000000;
+  --gc-900: #080808;
+  --gc-850: #0D0D0D;
+  --gc-800: #121212;
+  --gc-700: #181818;
+  --gc-600: #202020;
+  --gc-500: #292929;
+  --gc-400: #343434;
+  --gc-300: #464646;
+  --gc-200: #646464;
+  --gc-150: #8A8782;
+  --gc-100: #AAA5A0;
+  --gc-80: #CBC5BE;
+  --gc-10: #E8E2DC;
+  --gc-5: #F1ECE6;
+
+  --bg: var(--gc-black);
+  --surface: var(--gc-700);
+  --text: var(--gc-10);
+  --muted: var(--gc-100);
+  --border: var(--gc-400);
+}
+
+html,body,#__next{height:100%;}
+body{
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Editorial typography scale */
+h1, .hero-title { font-family: Inter, Manrope, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; font-weight:800; letter-spacing: -0.02em; }
+h2, h3 { font-family: Inter, Manrope, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; font-weight:700; }
+p, small, .meta { color: var(--muted); }
+
+/* Background large index style */
+.bg-index { position: absolute; inset: 0; display:flex; align-items:center; justify-content:flex-start; pointer-events:none; }
+.bg-index .num { font-weight:900; color: rgba(232,226,220,0.03); font-size: 28vw; line-height:0.9; }
+
+/* micro metadata */
+.micro { font-size: 11px; letter-spacing: 0.12em; text-transform:uppercase; color:var(--gc-100); }
+
+/* thin underline hover for nav */
+.nav-link { position:relative; display:inline-block; padding-bottom:4px; }
+.nav-link::after { content:''; position:absolute; left:0; right:0; bottom:0; height:1px; background:var(--border); transform:scaleX(0); transform-origin:left; transition:transform .45s cubic-bezier(.22,1,.36,1); }
+.nav-link:hover::after { transform:scaleX(1); }
+
+/* image frame helper */
+.image-frame { position:relative; overflow:hidden; border-radius:2px; }
+.image-frame img { display:block; width:100%; height:100%; object-fit:cover; }
+
+/* smooth scroll but respect reduced motion */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+.text-muted{color:var(--muted)}
+.text-secondary{color:var(--text)}
+
+/* subtle grain overlay for selected areas */
+.grain {
+  background-image: url('/grain.png');
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+/* reduce default rounded corners */
+.rounded-sm{border-radius:2px}
+
+/* utility for thin borders */
+.thin-border{border-color:var(--border)}
