@@ -23,10 +23,13 @@ export default function World() {
             <div className="text-sm text-muted uppercase tracking-wider">
               <div className="micro">WORLD 00</div>
               <div className="mt-2">SEED — 2048005618087379093</div>
-              <div className="mt-2">MODE — SURVIVAL</div>
+              <div className="mt-2">VERSION — 26.2</div>
+              <div className="mt-2">EDITION — JAVA</div>
               <div className="mt-2">STATUS — PERSISTENT</div>
-              <div className="mt-2">VERSION — JAVA</div>
-              <div className="mt-2">CREATED — 25.08.26</div>
+              <div className="mt-2">VOICE — PROXIMITY</div>
+              <div className="mt-4">
+                <a href="http://185.83.152.14:5520" target="_blank" rel="noopener noreferrer" className="text-xs micro uppercase border-b border-border">OPEN WORLD MAP</a>
+              </div>
             </div>
 
             <motion.h4 variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} className="mt-8 text-3xl font-semibold">EVERYTHING STARTS HERE.</motion.h4>

@@ -1,6 +1,10 @@
+"use client"
+
 import { motion, useReducedMotion } from 'framer-motion'
 import { heroContainer, fadeUp } from './animations/motionVariants'
 import { useGlobalParallax } from './animations/scrollMotion'
+import { useEffect, useState } from 'react'
+import useServerStatus from './hooks/useServerStatus'
 
 export default function Hero() {
   const reduce = useReducedMotion()
@@ -8,6 +12,9 @@ export default function Hero() {
   const titleY = useGlobalParallax([0, -30], [0, 800])
   const smallY = useGlobalParallax([0, -12], [0, 800])
   const overlayOpacity = useGlobalParallax([0.65, 0.8], [0, 800])
+
+  const { status, playersOnline, playersMax } = useServerStatus()
+  const playersDisplay = status === 'online' ? `${playersOnline ?? 0} / ${playersMax}` : `— / ${playersMax}`
 
   return (
     <section className="min-h-[60vh] relative flex items-end" aria-label="Hero">
@@ -45,11 +52,11 @@ export default function Hero() {
             <div className="inline-flex items-center gap-6">
               <span>WORLD STATUS</span>
               <span className="inline-flex items-center gap-2">
-                <span style={{ width:8, height:8, borderRadius:8, background: 'var(--accent)', display:'inline-block' }} aria-hidden="true" />
-                <span>ONLINE</span>
+                  <span style={{ width:8, height:8, borderRadius:8, background: 'var(--accent)', display:'inline-block' }} aria-hidden="true" />
+                  <span>{status === 'online' ? 'ONLINE' : status === 'offline' ? 'OFFLINE' : 'UNKNOWN'}</span>
               </span>
             </div>
-            <div className="mt-0">PLAYERS — 6 / 30</div>
+              <div className="mt-0">PLAYERS — {playersDisplay}</div>
           </motion.div>
         </motion.div>
       </motion.div>
